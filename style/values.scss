@@ -1,0 +1,6 @@
+$header-title: #333333;
+$list-color: #b2b2b2;
+
+@mixin gradient($from, $to){
+	background: linear-gradient(to bottom, $from 0%, $to 100%);
+}

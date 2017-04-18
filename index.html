@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Simple ToDo List</title>
+	<meta charset="utf-8">
+	<!-- <link rel="stylesheet" href="style/flexboxgrid.css"> -->
+	<link rel="stylesheet" href="style/font-awesome.min.css">
+	<link rel="stylesheet" href="style/style.css">
+
+	<script src="js/main.js" defer></script>
+</head>
+<body>
+<div class="container">
+	<header class="header">
+		<h1 class="header__title">simple todo list</h1>
+		<h6 class="header__description">from ruby garage</h6>
+	</header>
+	<ul class="wrapper">
+		<li class="wrapper__item">
+			<div class="item__header">
+				<i class="fa fa-calendar icon calendar" aria-hidden="true"></i>
+				<input type="text" value="Lorem ipsum dolor sit" placeholder="Title" class="item__header_input" disabled>
+				<button class="header__icon"><i class="fa fa-pencil icon" aria-hidden="true"></i></button>
+				<button class="header__icon"><i class="fa fa-trash-o icon" aria-hidden="true"></i></button>
+			</div>
+			<form action="#" class="item__new-task">
+				<i class="fa fa-plus icon" aria-hidden="true"></i>
+				<input type="text" class="new-task__text" placeholder="Start typing here to create a new task...">
+				<button type="submit" class="new-task__btn">Add task</button>
+			</form>
+			<ul class="item__list">
+				<!-- <li class="list__point">
+					<input type="checkbox" id="point1" class="point__checkbox">
+					<label for="point1" class="point__label">Ipsum dolor sit amet</label>
+					<div class="point__action">
+						<button class="action__btn"><i class="fa fa-arrows" aria-hidden="true"></i></button>
+						<button class="action__btn"><i class="fa fa-pencil" aria-hidden="true"></i></button>
+						<button class="action__btn"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+					</div>
+				</li> -->
+			</ul>
+		</li>
+	</ul>
+	<footer class="footer">
+		<form action="#" class="footer__form">
+			<button type="submit" class="footer__add"><i class="fa fa-plus icon fa-lg" aria-hidden="true"></i>
+			<span class="form__span">Add TODO List</span>
+			</button>
+		</form>
+		<h6 class="footer__description">&copy; ruby garage</h6>
+	</footer>
+</div>
+</body>
+</html>
