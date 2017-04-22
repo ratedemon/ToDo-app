@@ -8,7 +8,7 @@
 	color: white;
 }
 body{
-	background: url(../img/background1.svg);
+	background: url(../img/background.jpg);
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -30,7 +30,7 @@ body{
 	justify-content: center;
 	align-items: center;
 	color: $header-title;
-	padding-top: 1%;
+	padding-top: .5%;
 }
 .header__title{
 	text-transform: uppercase;
@@ -59,6 +59,7 @@ body{
 	align-items: stretch;
 	width: 100%;
 	border-radius: 0 0 5% 5%;
+	margin-bottom: 5%;
 }
 .item__header{
 	display: flex;
@@ -139,6 +140,8 @@ body{
 	cursor: pointer;
 	&:focus, &:hover{
 		outline: none;
+		background: lighten(#447557, 5%);
+
 	}
 }
 .list__point{
@@ -170,6 +173,9 @@ body{
 	color: $list-color;
 	font-size: 1em;
 	flex: 1;
+	display: flex;
+	justify-content: flex-start;
+	align-items: stretch;
 	margin: 0;
 	padding: 1% 2%;
 	cursor: pointer;
@@ -177,9 +183,24 @@ body{
 		right: 1px solid #e7ebea;
 		left: 1px solid #efdadf;
 	}
+	.point__label_input{
+		flex: 1;
+		background: transparent;
+		resize: none;
+		border: none;
+		color: $list-color;
+		cursor: pointer;
+		/*text-decoration: line-through;*/
+		&:focus{
+			outline: none;
+			color: darken($list-color, 20%);
+		}
+	}
 }
 .point__checkbox:checked + .point__label{
-	text-decoration: line-through;
+	.point__label_input{
+		text-decoration: line-through;
+	}
 }
 .point__action{
 	display: flex;
@@ -209,6 +230,71 @@ body{
 		}
 	}
 }
+.title-task{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: rgba(0,0,0,.5);
+	/*padding: 0 10%;*/
+	z-index: 100;
+	transform: translateY(-100%);
+	transition: all .5s ease;
+	.title-task__add{
+		width: 40%;
+		/*height: 50%;*/
+		/*@include gradient(#5287bd, #3960a3);*/
+		background: transparent;
+		display: flex;
+		/*flex-direction: column;*/
+		justify-content: center;
+		align-items: center;
+		box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+	}
+	.add__text{
+		/*color: lighten($list-color, 20%);*/
+		color: black;
+		font-size: 1.5em;
+		padding: .15em .2em;
+		box-shadow: inset 0px 1px 2px 0px rgba(0,0,0,0.75);
+		border: none;
+		flex: .8;
+		&:focus{
+			outline: none;
+		}
+	}
+	.add__submit{
+		@extend .new-task__btn;
+		align-self: stretch;
+		flex: .2;
+		font-size: 1em;
+	}
+	&.active{
+		transform: translateY(0%);
+	}
+	.title-task__close{
+		position: absolute;
+		top: 5%;
+		right: 5%;
+		cursor: pointer;
+		background: transparent;
+		border: none;
+		color: darken(white,20%);
+		transition: all .25s ease;
+		font-size: 1.5em;
+		padding: .5em;
+		&:focus,&:hover{
+			color: white;
+			outline: none;
+		}
+	}
+}
+
+
 .footer{
 	@extend .header;
 	padding-top: 0;
@@ -254,3 +340,5 @@ body{
 	text-transform: capitalize;
 	font-size: .8em;
 }
+
+@import "media.scss";
