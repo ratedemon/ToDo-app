@@ -14,4 +14,31 @@
 	.wrapper{
 		width: 100%;
 	}
+	.item__header{
+		.item__header_input{
+			flex: .7;
+			margin-left: 0;
+		}
+		.calendar, .header__icon{
+			flex: .1;
+		}
+	}
+	.new-task__text{
+		flex: .7;
+	}
+	.new-task__btn{
+		flex: .2;
+	}
+	.item__new-task{
+		padding: 1%;
+		.icon{
+			flex: .1;
+		}
+	}
+	.drap{
+		display: none;
+	}
+	.footer__form{
+		width: 50%;
+	}
 }
