@@ -5,8 +5,13 @@ module.exports = {
     // результат работы Webpack будет в файле с таким именем
     filename: './build/index.js'
   },
+  resolveLoader:{
+    modules: ["node_modules"],
+    moduleExtensions: ['-loader'],
+    extensions: ["*", ".js"]
+  },
   module: {
-    loaders: [
+    rules: [
       {
         test   : /\.js$/,
         exclude: /node_modules/,
