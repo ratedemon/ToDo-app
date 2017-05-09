@@ -20,7 +20,7 @@ export class OnDisplayItems{
 			</div>
 			<form class="item__new-task">
 				<i class="fa fa-plus icon" aria-hidden="true"></i>
-				<input type="text" class="new-task__text" placeholder="Start typing here to create a new task...">
+				<input type="text" class="new-task__text" placeholder="Start typing here to create a new task..." tabindex="${i+1}">
 				<button type="submit" class="new-task__btn">Add task</button>
 			</form>
 			<ul class="item__list">

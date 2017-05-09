@@ -306,6 +306,10 @@ body{
 	}
 }
 
+.none{
+	display: none;
+	// animation: removing 1s ease;
+}
 
 .footer{
 	@extend .header;
@@ -361,5 +365,19 @@ body{
 	}
 	to{
 		opacity: 1;
+	}
+}
+
+@keyframes removing{
+	0%{
+		opacity: 1;
+		height: auto;
+	}
+	99%{
+		opacity: 0;
+		height: 0;
+	}
+	100%{
+		display: none;
 	}
 }

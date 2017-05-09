@@ -12,10 +12,11 @@ export class AddItems{
 }
 
 export class GetItemsTitle{
-	constructor(element){
+	constructor(element,arr){
 		// this.event = e;
 		this.elem = element;
 		this.txt;
+		this.arr = arr;
 		// console.log(this.elem);
 		// this.title=title;
 		// console.log(this.ev);
@@ -31,8 +32,15 @@ export class GetItemsTitle{
 		return text;
 	}
 	closeWindow(){
-		
 		this.elem.reset;
 		this.elem.classList.remove('active');
+	}
+	removeItem(){
+		// this.elem.dataset.index
+		this.arr.splice(this.elem.dataset.index,1);
+		this.elem.classList.add('none');
+
+		return this.arr;
+		// localStorage.setItem('items', JSON.stringify(this.arr));
 	}
 }
