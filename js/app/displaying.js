@@ -5,7 +5,7 @@ export class OnDisplayItems{
     // let arrMain = arr;
     // let listMain = list;
 		this.arr=arr;
-		this.list = list
+		this.list = list;
     this.html = this.showing();
   }
   showing(){

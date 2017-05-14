@@ -1,6 +1,6 @@
 "use strict";
 
-export class AddTasks{
+export class Tasks{
   constructor(text, arr){
     let txt = text;
     this.task = {
