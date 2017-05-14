@@ -12,16 +12,9 @@
 // }
 
 export class Items{
-	constructor(txt, arr){
-		// if(text.tagName!=="FORM")
-		// {
-		// 	let txt = text;
-		// 	this.item = {title: txt, arrayItems: []};
-		// 	this.arr = arr;
-		// 	this.arr.push(this.item);
-		// }else{
+	constructor(txt){
 			this.elem = txt;
-			this.arr = arr;
+			// this.arr = arr;
 			this.item = {title: "", arrayItems: []};
 		// }	
 	}
@@ -29,17 +22,9 @@ export class Items{
 		ev.preventDefault();
 		const input = this.elem.querySelector('.add__text');
 		const text = input.value;
-		// if(text.replace(/\s/g, "").length<1){
-    //   return;
-    // }
-		// this.txt = text;
 		this.item.title = text;
 		input.value = "";
-		
-		// console.log(this.elem);
-		// this.arr.push(this.item);
 		this.closeWindow();
-		
 		return this.item;
 	}
 	closeWindow(){

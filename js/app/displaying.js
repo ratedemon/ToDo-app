@@ -6,7 +6,7 @@ export class OnDisplayItems{
     // let listMain = list;
 		this.arr=arr;
 		this.list = list;
-    this.html = this.showing();
+    // this.html = this.showing();
   }
   showing(){
     this.list.innerHTML = this.arr.map((item,i)=>{
@@ -36,7 +36,7 @@ export class OnDisplayTasks{
 	constructor(arr, list){
 		this.arr = arr;
 		this.list = list;
-		this.html = this.showing();
+		// this.html = this.showing();
 	}
 	showing(){
 		this.list.innerHTML = this.arr.map((item,i)=>{
